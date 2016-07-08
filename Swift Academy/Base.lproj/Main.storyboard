@@ -1,25 +1,476 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Swift_Academy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBa-zU-hmt">
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1ts-sM-bqL" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="8" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="0eb-gd-LwG"/>
+                                            <constraint firstAttribute="height" constant="50" id="3el-Yw-CeU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-bd-yJy" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="132" width="272" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UOe-v8-okU"/>
+                                            <constraint firstAttribute="width" constant="272" id="fP4-V7-i0a"/>
+                                        </constraints>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DX-1D-qsJ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N0d-3y-P0E" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="70" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="a1L-F0-AwQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="gak-Dh-KdY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCd-YO-9ee" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="198" width="272" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="dz9-UX-vHf"/>
+                                            <constraint firstAttribute="height" constant="50" id="ofd-2h-bXj"/>
+                                        </constraints>
+                                        <state key="normal" title="No Account? Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="oyV-hS-sxP" kind="modal" modalTransitionStyle="coverVertical" id="9Md-8x-gZR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-k2-wuV">
+                                        <rect key="frame" x="4" y="256" width="272" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="RgY-dN-ajT"/>
+                                            <constraint firstAttribute="width" constant="272" id="f4L-Wl-oqA"/>
+                                        </constraints>
+                                        <state key="normal" title="Forgot Password? ">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="YMh-SE-C90" kind="modal" modalTransitionStyle="coverVertical" id="3jR-I3-TRQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="N0d-3y-P0E" firstAttribute="centerX" secondItem="NBa-zU-hmt" secondAttribute="centerX" id="2MF-7l-O8X"/>
+                                    <constraint firstItem="SDk-bd-yJy" firstAttribute="centerX" secondItem="NBa-zU-hmt" secondAttribute="centerX" id="FhG-8N-yXU"/>
+                                    <constraint firstItem="1ts-sM-bqL" firstAttribute="centerX" secondItem="NBa-zU-hmt" secondAttribute="centerX" id="Kji-bc-hIk"/>
+                                    <constraint firstItem="iFZ-k2-wuV" firstAttribute="centerX" secondItem="NBa-zU-hmt" secondAttribute="centerX" id="L8x-52-eP1"/>
+                                    <constraint firstItem="N0d-3y-P0E" firstAttribute="top" secondItem="1ts-sM-bqL" secondAttribute="bottom" constant="12" id="PUn-da-DrX"/>
+                                    <constraint firstItem="1ts-sM-bqL" firstAttribute="top" secondItem="NBa-zU-hmt" secondAttribute="top" constant="8" id="WBR-cg-gGO"/>
+                                    <constraint firstItem="iFZ-k2-wuV" firstAttribute="top" secondItem="yCd-YO-9ee" secondAttribute="bottom" constant="8" symbolic="YES" id="jGt-D4-kqC"/>
+                                    <constraint firstAttribute="width" constant="280" id="k57-EA-pu1"/>
+                                    <constraint firstItem="SDk-bd-yJy" firstAttribute="top" secondItem="N0d-3y-P0E" secondAttribute="bottom" constant="12" id="kad-De-XjS"/>
+                                    <constraint firstAttribute="height" constant="280" id="mLO-HH-NPJ"/>
+                                    <constraint firstItem="yCd-YO-9ee" firstAttribute="top" secondItem="SDk-bd-yJy" secondAttribute="bottom" constant="16" id="qQ0-c7-R35"/>
+                                    <constraint firstItem="yCd-YO-9ee" firstAttribute="leading" secondItem="iFZ-k2-wuV" secondAttribute="leading" id="sys-Rd-9of"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBG.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="QTd-9N-QC4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QTd-9N-QC4" secondAttribute="trailing" id="3Xh-di-nZ4"/>
+                            <constraint firstItem="QTd-9N-QC4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6PL-zL-33G"/>
+                            <constraint firstItem="QTd-9N-QC4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HTA-Iy-bjx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QTd-9N-QC4" secondAttribute="bottom" id="pKg-gm-8Ap"/>
+                            <constraint firstItem="NBa-zU-hmt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFe-Am-lMx"/>
+                            <constraint firstItem="NBa-zU-hmt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xV9-MY-Nhv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="NBa-zU-hmt" id="QiS-0a-W0d"/>
+                        <outlet property="passwordTextField" destination="N0d-3y-P0E" id="HhI-tF-MZf"/>
+                        <outlet property="usernameTextField" destination="1ts-sM-bqL" id="7Y7-Kj-oND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="234" y="377"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="gOV-Fa-Bmz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDm-nE-Z2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="evO-aJ-iB1" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="oyV-hS-sxP" customClass="SignupViewController" customModule="Swift_Academy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8b-F7-50T"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQg-vM-DQX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JgF-0h-kdh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignUpBG.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-hT-DFU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKF-16-w38">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="n0Y-ku-sxv" customClass="CustomizableImageView" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="85" y="20" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Vgr-h9-h54"/>
+                                            <constraint firstAttribute="height" constant="150" id="mES-Dd-mod"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="75"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEs-8i-trd" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="480" width="272" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="W55-JZ-267"/>
+                                            <constraint firstAttribute="height" constant="50" id="dZ3-GF-wLl"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJM-kM-x2Z"/>
+                                            <action selector="signUpAction:" destination="oyV-hS-sxP" eventType="touchUpInside" id="IQT-wB-tXe"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-TJ-EJ8" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="178" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="AdT-S1-RXF"/>
+                                            <constraint firstAttribute="height" constant="50" id="THe-6h-F8g"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Wah-uw-RS8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="yeC-yB-vmS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="slw-s6-OSE" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="236" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="0Bi-To-Oxz"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1Mm-m8-frm"/>
+                                            <constraint firstAttribute="height" constant="50" id="KP3-Pg-t6Q"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="sWP-v8-3cd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="COUNTRY" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FRJ-eT-liG" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="352" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7UK-Sa-hhr"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Aa0-BE-Skg"/>
+                                            <constraint firstAttribute="width" constant="272" id="YeP-21-cwW"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="fLN-eX-GY4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BIOGRAPHY" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-Mx-ew2" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="294" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="PQI-zd-gKi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RSB-KQ-8zH"/>
+                                            <constraint firstAttribute="width" constant="272" id="f49-R6-3sl"/>
+                                            <constraint firstAttribute="height" constant="50" id="uUs-ZP-gwS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-pe-JAu" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="410" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="LqX-rh-rna"/>
+                                            <constraint firstAttribute="height" constant="50" id="SIK-dT-BWz"/>
+                                            <constraint firstAttribute="width" constant="272" id="TQi-ng-89H"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="mGY-K1-1bg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOL-xK-Vhj" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="IUu-yv-71W"/>
+                                            <constraint firstAttribute="height" constant="50" id="Sg9-A8-JUm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="evO-aJ-iB1" kind="unwind" unwindAction="unwindToLogin:" id="yuc-Xy-Jip"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gjd-TJ-EJ8" firstAttribute="top" secondItem="n0Y-ku-sxv" secondAttribute="bottom" constant="8" id="7KV-f8-tXA"/>
+                                    <constraint firstAttribute="bottom" secondItem="n0Y-ku-sxv" secondAttribute="bottom" constant="515" id="9Nr-he-LIx"/>
+                                    <constraint firstItem="AEs-8i-trd" firstAttribute="top" secondItem="bhu-pe-JAu" secondAttribute="bottom" constant="20" id="AqE-O6-9h6"/>
+                                    <constraint firstItem="bhu-pe-JAu" firstAttribute="top" secondItem="FRJ-eT-liG" secondAttribute="bottom" constant="8" id="Bmi-63-8I6"/>
+                                    <constraint firstItem="slw-s6-OSE" firstAttribute="top" secondItem="Gjd-TJ-EJ8" secondAttribute="bottom" constant="8" id="DNK-qj-nLh"/>
+                                    <constraint firstItem="bhu-pe-JAu" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="LR9-Qq-qrr"/>
+                                    <constraint firstItem="eOL-xK-Vhj" firstAttribute="leading" secondItem="OKF-16-w38" secondAttribute="leading" constant="20" id="NRA-m9-cXw"/>
+                                    <constraint firstItem="Gjd-TJ-EJ8" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="RoW-7q-4bO"/>
+                                    <constraint firstItem="n0Y-ku-sxv" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="Uhl-da-PPq"/>
+                                    <constraint firstItem="AEs-8i-trd" firstAttribute="leading" secondItem="bhu-pe-JAu" secondAttribute="leading" id="XsS-hX-dBr"/>
+                                    <constraint firstItem="FRJ-eT-liG" firstAttribute="top" secondItem="M3b-Mx-ew2" secondAttribute="bottom" constant="8" id="b4o-dC-D7V"/>
+                                    <constraint firstItem="eOL-xK-Vhj" firstAttribute="top" secondItem="OKF-16-w38" secondAttribute="top" constant="20" id="bC5-kB-xDV"/>
+                                    <constraint firstItem="M3b-Mx-ew2" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="bTO-H0-6xq"/>
+                                    <constraint firstItem="FRJ-eT-liG" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="fQj-40-Iu2"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEs-8i-trd" secondAttribute="trailing" constant="24" id="ffU-lJ-vR5"/>
+                                    <constraint firstItem="slw-s6-OSE" firstAttribute="centerX" secondItem="OKF-16-w38" secondAttribute="centerX" id="jmK-qH-P1l"/>
+                                    <constraint firstItem="n0Y-ku-sxv" firstAttribute="top" secondItem="OKF-16-w38" secondAttribute="top" constant="20" id="o9A-a2-LxL"/>
+                                    <constraint firstItem="M3b-Mx-ew2" firstAttribute="top" secondItem="slw-s6-OSE" secondAttribute="bottom" constant="8" id="rLc-Ub-B58"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OQg-vM-DQX" firstAttribute="top" secondItem="1WQ-hT-DFU" secondAttribute="bottom" id="2Ze-3y-gXe"/>
+                            <constraint firstItem="1WQ-hT-DFU" firstAttribute="top" secondItem="JgF-0h-kdh" secondAttribute="top" id="9WA-wA-6vX"/>
+                            <constraint firstItem="OQg-vM-DQX" firstAttribute="top" secondItem="OKF-16-w38" secondAttribute="bottom" id="CBT-qW-dMb"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="centerX" secondItem="JgF-0h-kdh" secondAttribute="centerX" id="K4I-ak-DOI"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="top" secondItem="JgF-0h-kdh" secondAttribute="top" id="KEa-Yk-pdJ"/>
+                            <constraint firstItem="1WQ-hT-DFU" firstAttribute="leading" secondItem="JgF-0h-kdh" secondAttribute="leading" id="LPs-vh-ax1"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="leading" secondItem="JgF-0h-kdh" secondAttribute="leading" id="Pnz-4t-hbh"/>
+                            <constraint firstAttribute="trailing" secondItem="OKF-16-w38" secondAttribute="trailing" id="PoQ-p1-OSV"/>
+                            <constraint firstAttribute="trailing" secondItem="1WQ-hT-DFU" secondAttribute="trailing" id="VJ0-jS-Dlv"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="trailing" secondItem="1WQ-hT-DFU" secondAttribute="trailing" id="ZOl-Ne-Ptm"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="top" secondItem="1WQ-hT-DFU" secondAttribute="top" id="kmd-5i-3rn"/>
+                            <constraint firstItem="OKF-16-w38" firstAttribute="leading" secondItem="1WQ-hT-DFU" secondAttribute="leading" id="yIG-e1-ZZ5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="biographyTextField" destination="M3b-Mx-ew2" id="dUT-Tc-3rm"/>
+                        <outlet property="countryTextField" destination="FRJ-eT-liG" id="eCY-ih-KBU"/>
+                        <outlet property="emailTextField" destination="slw-s6-OSE" id="mye-bi-jt7"/>
+                        <outlet property="passwordTextField" destination="bhu-pe-JAu" id="YK8-nB-yP5"/>
+                        <outlet property="userImageView" destination="n0Y-ku-sxv" id="gbU-dZ-WAM"/>
+                        <outlet property="usernameTextField" destination="Gjd-TJ-EJ8" id="Xh9-Gs-LX2"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="574" y="377"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="2O5-Sr-bmI">
+            <objects>
+                <viewController id="YMh-SE-C90" customClass="ResetPasswordViewController" customModule="Swift_Academy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="03k-PW-FO8"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJb-S6-5ys"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="srA-sR-ZvO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ResetBG.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="saS-lx-K5g">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrL-Hy-HMe">
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="v16-rx-wmq" customClass="CustomizableTextField" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="84" width="272" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2Sw-aF-MkU"/>
+                                            <constraint firstAttribute="height" constant="50" id="a0K-xH-59M"/>
+                                            <constraint firstAttribute="width" constant="272" id="lbs-mu-8TC"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="uXa-Ea-cKQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsG-2b-11z" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="142" width="272" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="272" id="5fB-3w-RRu"/>
+                                            <constraint firstAttribute="height" constant="50" id="NED-WM-MgM"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset Password">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0o7-7b-zNl"/>
+                                            <action selector="resetPasswordAction:" destination="YMh-SE-C90" eventType="touchUpInside" id="9JW-Hz-Yev"/>
+                                            <action selector="signUpAction:" destination="oyV-hS-sxP" eventType="touchUpInside" id="3RK-Rq-Sss"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="v16-rx-wmq" firstAttribute="centerX" secondItem="LrL-Hy-HMe" secondAttribute="centerX" id="Uuo-X7-6sp"/>
+                                    <constraint firstItem="QsG-2b-11z" firstAttribute="centerX" secondItem="LrL-Hy-HMe" secondAttribute="centerX" id="Wcc-xB-5bG"/>
+                                    <constraint firstAttribute="height" constant="280" id="ZTf-4j-VUy"/>
+                                    <constraint firstItem="v16-rx-wmq" firstAttribute="top" secondItem="LrL-Hy-HMe" secondAttribute="top" constant="84" id="nWS-KT-1RQ"/>
+                                    <constraint firstItem="QsG-2b-11z" firstAttribute="top" secondItem="v16-rx-wmq" secondAttribute="bottom" constant="8" id="qQN-lo-wvM"/>
+                                    <constraint firstAttribute="width" constant="280" id="wlU-7h-sCe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qA-Ck-gUa" customClass="CustomizableButton" customModule="Swift_Academy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hQV-KK-Nls"/>
+                                    <constraint firstAttribute="width" constant="50" id="pag-zT-aaW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0tH-lL-tW2" kind="unwind" unwindAction="unwindToLogin:" id="i9l-Tk-jrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="saS-lx-K5g" firstAttribute="leading" secondItem="srA-sR-ZvO" secondAttribute="leading" id="7VB-O4-j0Y"/>
+                            <constraint firstItem="4qA-Ck-gUa" firstAttribute="top" secondItem="03k-PW-FO8" secondAttribute="bottom" id="BNG-bA-m2F"/>
+                            <constraint firstItem="LrL-Hy-HMe" firstAttribute="centerX" secondItem="srA-sR-ZvO" secondAttribute="centerX" id="dOJ-d5-Ko3"/>
+                            <constraint firstAttribute="trailing" secondItem="saS-lx-K5g" secondAttribute="trailing" id="f9i-qc-dhs"/>
+                            <constraint firstItem="LrL-Hy-HMe" firstAttribute="centerY" secondItem="srA-sR-ZvO" secondAttribute="centerY" id="kwi-Aa-02O"/>
+                            <constraint firstItem="XJb-S6-5ys" firstAttribute="top" secondItem="saS-lx-K5g" secondAttribute="bottom" id="qnN-vW-Lw6"/>
+                            <constraint firstItem="4qA-Ck-gUa" firstAttribute="leading" secondItem="srA-sR-ZvO" secondAttribute="leadingMargin" id="um4-LZ-u5O"/>
+                            <constraint firstItem="saS-lx-K5g" firstAttribute="top" secondItem="srA-sR-ZvO" secondAttribute="top" id="v91-Em-Yjj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="v16-rx-wmq" id="x2k-tf-YSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4B-LS-2J5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0tH-lL-tW2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LoginBG.jpeg" width="7360" height="4912"/>
+        <image name="ResetBG.jpeg" width="2048" height="1369"/>
+        <image name="SignUpBG.jpeg" width="5184" height="3456"/>
+        <image name="user-placeholder.jpg" width="300" height="300"/>
+    </resources>
 </document>

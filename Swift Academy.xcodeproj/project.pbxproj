@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		27EFD2461D2F70BF0000D5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2451D2F70BF0000D5E2 /* AppDelegate.swift */; };
-		27EFD2481D2F70BF0000D5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2471D2F70BF0000D5E2 /* ViewController.swift */; };
+		27EFD2481D2F70BF0000D5E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2471D2F70BF0000D5E2 /* LoginViewController.swift */; };
 		27EFD24B1D2F70BF0000D5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD2491D2F70BF0000D5E2 /* Main.storyboard */; };
 		27EFD24D1D2F70BF0000D5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD24C1D2F70BF0000D5E2 /* Assets.xcassets */; };
 		27EFD2501D2F70BF0000D5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD24E1D2F70BF0000D5E2 /* LaunchScreen.storyboard */; };
+		27EFD25A1D2F720A0000D5E2 /* SignUpBG.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD2571D2F720A0000D5E2 /* SignUpBG.jpeg */; };
+		27EFD25C1D2F720A0000D5E2 /* LoginBG.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD2591D2F720A0000D5E2 /* LoginBG.jpeg */; };
+		27EFD25F1D2F7A500000D5E2 /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD25E1D2F7A4F0000D5E2 /* CustomizableButton.swift */; };
+		27EFD2611D2F7A660000D5E2 /* CustomizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2601D2F7A660000D5E2 /* CustomizableTextField.swift */; };
+		27EFD2651D2F7E610000D5E2 /* user-placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD2641D2F7E610000D5E2 /* user-placeholder.jpg */; };
+		27EFD2671D2F7EAD0000D5E2 /* CustomizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2661D2F7EAD0000D5E2 /* CustomizableImageView.swift */; };
+		27EFD26A1D2F80050000D5E2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD2691D2F80050000D5E2 /* SignupViewController.swift */; };
+		27EFD26C1D2F83E50000D5E2 /* ResetBG.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD26B1D2F83E50000D5E2 /* ResetBG.jpeg */; };
+		27EFD26E1D2F862F0000D5E2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD26D1D2F862F0000D5E2 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27EFD2421D2F70BF0000D5E2 /* Swift Academy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Academy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EFD2451D2F70BF0000D5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27EFD2471D2F70BF0000D5E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27EFD2471D2F70BF0000D5E2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27EFD24A1D2F70BF0000D5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27EFD24C1D2F70BF0000D5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27EFD24F1D2F70BF0000D5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27EFD2511D2F70BF0000D5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27EFD2571D2F720A0000D5E2 /* SignUpBG.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SignUpBG.jpeg; sourceTree = "<group>"; };
+		27EFD2591D2F720A0000D5E2 /* LoginBG.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBG.jpeg; sourceTree = "<group>"; };
+		27EFD25E1D2F7A4F0000D5E2 /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
+		27EFD2601D2F7A660000D5E2 /* CustomizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextField.swift; sourceTree = "<group>"; };
+		27EFD2641D2F7E610000D5E2 /* user-placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "user-placeholder.jpg"; sourceTree = "<group>"; };
+		27EFD2661D2F7EAD0000D5E2 /* CustomizableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableImageView.swift; sourceTree = "<group>"; };
+		27EFD2691D2F80050000D5E2 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		27EFD26B1D2F83E50000D5E2 /* ResetBG.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ResetBG.jpeg; sourceTree = "<group>"; };
+		27EFD26D1D2F862F0000D5E2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,55 @@
 		27EFD2441D2F70BF0000D5E2 /* Swift Academy */ = {
 			isa = PBXGroup;
 			children = (
-				27EFD2451D2F70BF0000D5E2 /* AppDelegate.swift */,
-				27EFD2471D2F70BF0000D5E2 /* ViewController.swift */,
+				27EFD2681D2F7FED0000D5E2 /* Controllers */,
+				27EFD2621D2F7A710000D5E2 /* Customizable Controls */,
+				27EFD2631D2F7A8A0000D5E2 /* Supporting Files */,
+				27EFD25D1D2F72370000D5E2 /* Background Images */,
+			);
+			path = "Swift Academy";
+			sourceTree = "<group>";
+		};
+		27EFD25D1D2F72370000D5E2 /* Background Images */ = {
+			isa = PBXGroup;
+			children = (
+				27EFD26B1D2F83E50000D5E2 /* ResetBG.jpeg */,
+				27EFD2641D2F7E610000D5E2 /* user-placeholder.jpg */,
+				27EFD2571D2F720A0000D5E2 /* SignUpBG.jpeg */,
+				27EFD2591D2F720A0000D5E2 /* LoginBG.jpeg */,
+			);
+			name = "Background Images";
+			sourceTree = "<group>";
+		};
+		27EFD2621D2F7A710000D5E2 /* Customizable Controls */ = {
+			isa = PBXGroup;
+			children = (
+				27EFD25E1D2F7A4F0000D5E2 /* CustomizableButton.swift */,
+				27EFD2601D2F7A660000D5E2 /* CustomizableTextField.swift */,
+				27EFD2661D2F7EAD0000D5E2 /* CustomizableImageView.swift */,
+			);
+			name = "Customizable Controls";
+			sourceTree = "<group>";
+		};
+		27EFD2631D2F7A8A0000D5E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				27EFD2491D2F70BF0000D5E2 /* Main.storyboard */,
 				27EFD24C1D2F70BF0000D5E2 /* Assets.xcassets */,
 				27EFD24E1D2F70BF0000D5E2 /* LaunchScreen.storyboard */,
 				27EFD2511D2F70BF0000D5E2 /* Info.plist */,
 			);
-			path = "Swift Academy";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27EFD2681D2F7FED0000D5E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27EFD2451D2F70BF0000D5E2 /* AppDelegate.swift */,
+				27EFD2471D2F70BF0000D5E2 /* LoginViewController.swift */,
+				27EFD2691D2F80050000D5E2 /* SignupViewController.swift */,
+				27EFD26D1D2F862F0000D5E2 /* ResetPasswordViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +183,11 @@
 			files = (
 				27EFD2501D2F70BF0000D5E2 /* LaunchScreen.storyboard in Resources */,
 				27EFD24D1D2F70BF0000D5E2 /* Assets.xcassets in Resources */,
+				27EFD25C1D2F720A0000D5E2 /* LoginBG.jpeg in Resources */,
+				27EFD2651D2F7E610000D5E2 /* user-placeholder.jpg in Resources */,
 				27EFD24B1D2F70BF0000D5E2 /* Main.storyboard in Resources */,
+				27EFD26C1D2F83E50000D5E2 /* ResetBG.jpeg in Resources */,
+				27EFD25A1D2F720A0000D5E2 /* SignUpBG.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27EFD2481D2F70BF0000D5E2 /* ViewController.swift in Sources */,
+				27EFD26A1D2F80050000D5E2 /* SignupViewController.swift in Sources */,
+				27EFD2671D2F7EAD0000D5E2 /* CustomizableImageView.swift in Sources */,
+				27EFD2481D2F70BF0000D5E2 /* LoginViewController.swift in Sources */,
+				27EFD2611D2F7A660000D5E2 /* CustomizableTextField.swift in Sources */,
 				27EFD2461D2F70BF0000D5E2 /* AppDelegate.swift in Sources */,
+				27EFD25F1D2F7A500000D5E2 /* CustomizableButton.swift in Sources */,
+				27EFD26E1D2F862F0000D5E2 /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
